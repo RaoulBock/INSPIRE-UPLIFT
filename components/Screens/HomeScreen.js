@@ -15,6 +15,7 @@ import { APP_ICONS } from "../../context/settings";
 
 const HomeScreen = () => {
   const { list, pageIndex, setPageIndex } = React.useContext(AppContext);
+  const [like, setList] = React.useState(false);
 
   const iconList = [
     {
@@ -34,24 +35,30 @@ const HomeScreen = () => {
       <Nav />
       <View style={styles.view}>
         <View>
-          <Text style={[styles.text, { color: "#eee" }]}>{list}</Text>
-          <View style={styles.Likegrid}>
-            <TouchableOpacity style={styles.btn}>
-              <Text>{APP_ICONS.HEART}</Text>
-            </TouchableOpacity>
-          </View>
-        </View>
-        <View style={styles.grid}>
-          {iconList.map((e, i) => {
-            return (
-              <TouchableOpacity key={i} onPress={e.onPress}>
-                <Text>{e.icon}</Text>
-              </TouchableOpacity>
-            );
-          })}
+          <Text
+            style={[
+              styles.text,
+              {
+                color: "#eee"
+              }
+            ]}
+          >
+            {list}
+          </Text>
         </View>
       </View>
       {/* <BottomNav /> */}
+      <View
+        style={{
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "flex-end",
+          marginRight: 10,
+          marginVertical: 10
+        }}
+      >
+        <Button title={"Next"} />
+      </View>
     </View>
   );
 };

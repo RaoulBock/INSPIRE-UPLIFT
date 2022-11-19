@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Daily Ups",
-    "slug": "Daily Ups",
+    "slug": "DailyUps",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/finalLogo.png",
