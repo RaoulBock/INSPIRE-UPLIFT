@@ -4,7 +4,8 @@ import {
   View,
   Platform,
   StatusBar,
-  TouchableOpacity
+  TouchableOpacity,
+  Image
 } from "react-native";
 import React from "react";
 import Nav from "../Nav/Nav";
@@ -35,6 +36,18 @@ const HomeScreen = () => {
       <Nav />
       <View style={styles.view}>
         <View>
+          {!list && (
+            <Text
+              style={[
+                styles.text,
+                {
+                  color: "#eee"
+                }
+              ]}
+            >
+              LOADING.
+            </Text>
+          )}
           <Text
             style={[
               styles.text,
