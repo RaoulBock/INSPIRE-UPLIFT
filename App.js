@@ -26,7 +26,7 @@ const NavWrapper = () => {
     <>
       <StatusBar
         barStyle="dark-content"
-        backgroundColor="#6c5ce7"
+        backgroundColor="#1a1e21"
         style="light"
         hidden={false}
         translucent={true}

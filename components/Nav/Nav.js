@@ -1,14 +1,12 @@
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
 import { APP_ICONS } from "../../context/settings";
+import moment from "moment";
 
-const Nav = () => {
+const Nav = ({ title }) => {
   return (
     <View style={styles.outline}>
-      <Text style={styles.text}>Would You Rather?</Text>
-      <TouchableOpacity style={styles.btn}>
-        <Text>{APP_ICONS.REFRESH}</Text>
-      </TouchableOpacity>
+      <Text style={styles.text}>{moment().format("dddd")}</Text>
     </View>
   );
 };
@@ -21,18 +19,16 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     padding: 10,
-    borderBottomColor: "#a29bfe",
-    borderBottomWidth: 1,
-    backgroundColor: "#6c5ce7",
+    backgroundColor: "#1a1e21"
   },
   text: {
-    fontWeight: "500",
-    color: "#eee",
-    fontSize: 18,
+    fontWeight: "300",
+    color: "#dfe6e9",
+    fontSize: 48
   },
   btn: {
     backgroundColor: "#a29bfe",
     padding: 10,
-    borderRadius: 50,
-  },
+    borderRadius: 50
+  }
 });
