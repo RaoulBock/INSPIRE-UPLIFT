@@ -57,7 +57,7 @@ const HomeScreen = () => {
           marginVertical: 10
         }}
       >
-        <Button title={"Next"} />
+        <Button title={"Next"} onPress={() => setPageIndex(pageIndex + 1)} />
       </View>
     </View>
   );
@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
   text: {
     fontWeight: "500",
     color: "#404040",
-    fontSize: 28,
+    fontSize: 38,
     paddingHorizontal: 20
   },
   view: {
