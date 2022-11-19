@@ -6,7 +6,7 @@ import moment from "moment";
 const Nav = ({ title }) => {
   return (
     <View style={styles.outline}>
-      <Text style={styles.text}>{moment().format("dddd")}</Text>
+      <Text style={styles.text}>{moment().format("MMM Do YY")}</Text>
     </View>
   );
 };
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
   text: {
     fontWeight: "300",
     color: "#dfe6e9",
-    fontSize: 48
+    fontSize: 28
   },
   btn: {
     backgroundColor: "#a29bfe",

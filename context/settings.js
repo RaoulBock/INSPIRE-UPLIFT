@@ -33,5 +33,11 @@ export const APP_ICONS = {
       name="ios-bookmark-outline"
       style={{ color: "#5a6e7a", fontSize: 40 }}
     />
+  ),
+  HEART: (
+    <Ionicons
+      name="ios-heart-outline"
+      style={{ color: "#eee", fontSize: 28 }}
+    />
   )
 };

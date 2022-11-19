@@ -33,7 +33,14 @@ const HomeScreen = () => {
     <View style={styles.outline}>
       <Nav />
       <View style={styles.view}>
-        <Text style={[styles.text, { color: "#eee" }]}>{list}</Text>
+        <View>
+          <Text style={[styles.text, { color: "#eee" }]}>{list}</Text>
+          <View style={styles.Likegrid}>
+            <TouchableOpacity style={styles.btn}>
+              <Text>{APP_ICONS.HEART}</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
         <View style={styles.grid}>
           {iconList.map((e, i) => {
             return (
@@ -58,10 +65,10 @@ const styles = StyleSheet.create({
     backgroundColor: "#1a1e21"
   },
   text: {
-    padding: 20,
     fontWeight: "500",
     color: "#404040",
-    fontSize: 28
+    fontSize: 28,
+    paddingHorizontal: 20
   },
   view: {
     flex: 1
@@ -72,5 +79,9 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     paddingHorizontal: 10,
     flex: 1
+  },
+  Likegrid: {
+    paddingHorizontal: 20,
+    paddingVertical: 10
   }
 });
